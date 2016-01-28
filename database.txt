@@ -1,0 +1,11 @@
+CREATE DATABASE hu2k16;
+CREATE USER 'hasher-read'@'localhost' IDENTIFIED BY 'password';
+CREATE USER 'hasher-write'@'localhost' IDENTIFIED BY 'password';
+GRANT SELECT on hu2k16.* to 'hasher-read';
+GRANT INSERT,UPDATE ON hu2k16.* to 'hasher-write';
+use hu2k16;
+create table linkers(Student_Name VARCHAR(100), College VARCHAR(100));
+Insert into linkers VALUES("ABC1","XYZ1");
+Insert into linkers VALUES("ABC2","XYZ2");
+
+
